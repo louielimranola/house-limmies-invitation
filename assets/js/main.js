@@ -1,5 +1,5 @@
 const THEME_VIDEO_ID = 'eCemS3f-LDU';
-const DRACARYS_VIDEO_ID = 'J8-SjbRZ7jE';
+const TRISHA_PHOTO_SRC = 'assets/img/trisha.jpg';
 
 const slides = Array.from(document.querySelectorAll('.story-slide'));
 const storyOverlay = document.getElementById('story-overlay');
@@ -7,7 +7,7 @@ const invitationPage = document.getElementById('invitation-page');
 const dragonOverlay = document.getElementById('dragon-overlay');
 const themeAudio = document.getElementById('theme-audio');
 const themeToggle = document.getElementById('theme-toggle');
-const dracarysVideo = document.getElementById('dracarys-video');
+const dracarysPhoto = document.getElementById('dracarys-photo');
 
 let currentSlide = 0;
 let themePlaying = false;
@@ -66,13 +66,12 @@ function handleAccept() {
 
 function handleRefuse() {
   dragonOverlay.classList.add('active');
-  dracarysVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/${DRACARYS_VIDEO_ID}?autoplay=1"
-    allow="autoplay" frameborder="0" allowfullscreen></iframe>`;
+  dracarysPhoto.innerHTML = `<img src="${TRISHA_PHOTO_SRC}" alt="">`;
 }
 
 function resetChoice() {
   dragonOverlay.classList.remove('active');
-  dracarysVideo.innerHTML = '';
+  dracarysPhoto.innerHTML = '';
 }
 
 document.getElementById('btn-issa').addEventListener('click', handleAccept);

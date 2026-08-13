@@ -20,19 +20,22 @@
                C90,178 70,152 76,118 C82,82 102,42 130,15 Z" />
       <path class="map-divider" d="M68,172 C102,160 158,186 194,168" />
       <circle class="map-marker map-marker-north" cx="128" cy="95" r="5" />
-      <circle class="map-marker map-marker-south" cx="150" cy="240" r="5" />
+      <circle class="map-marker map-marker-south" cx="150" cy="228" r="5" />
+      <circle class="map-marker map-marker-capital" cx="168" cy="255" r="3.5" />
       <text class="map-label map-label-north" x="128" y="70" text-anchor="middle">BULACAN</text>
       <text class="map-sublabel" x="128" y="56" text-anchor="middle">House Limmies</text>
-      <text class="map-label map-label-south" x="150" y="275" text-anchor="middle">CAVITE</text>
-      <text class="map-sublabel" x="150" y="290" text-anchor="middle">House Jalandoni</text>
+      <text class="map-label map-label-south" x="150" y="263" text-anchor="middle">CAVITE</text>
+      <text class="map-sublabel" x="150" y="278" text-anchor="middle">House Jalandoni</text>
+      <text class="map-capital-label" x="178" y="258" text-anchor="start">Nuvali, the Southern Capital</text>
     </svg>
-    <p>For over a thousand years, the land of Magali d'Or has been divided — the North against the South.</p>
+    <p>For over a thousand years, the land of Maharlika has been divided — the North against the South.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="1">
     <p>In the North: House Limmies, whose words are known in every hall — <em>"Pinahan mo yan."</em></p>
-    <p>In the South: House Jalandoni, bannermen of the Koi.</p>
+    <p>In the South: House Jalandoni, bannermen of the Koi, whose court sits at Nuvali — a city of glass towers and quiet water.</p>
+    <p>Two houses, closer in blood than either would admit, and further apart in pride than the sea between them.</p>
     <svg class="koi-icon slide-icon" viewBox="0 0 120 80" aria-hidden="true">
       <path d="M15,45 C10,35 15,22 30,18 C45,14 62,20 72,32
                C78,26 88,22 98,24 C92,30 88,36 88,42 C88,48 92,54 98,60
@@ -46,12 +49,13 @@
 
   <div class="story-slide" data-slide="2">
     <p>A thousand years of mockery. A thousand petty victories.</p>
+    <p>Every name-day tourney, every harvest feast, a fresh excuse to prove whose land is greater.</p>
     <p>North against South. Never once at the same table.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="3">
-    <p>But beyond both borders, the Hollow Tide is rising — a dark not seen in a thousand years.</p>
+    <p>But beyond both borders, the Long Night is rising — a dark not seen in a thousand years.</p>
     <p>No house has ever stood against it alone.</p>
     <button class="continue-btn">Continue</button>
   </div>
@@ -64,29 +68,35 @@
 </div>
 
 <main id="invitation-page">
-  <div class="sigil" aria-hidden="true">
-    <svg viewBox="0 0 200 200" class="sigil-ring">
-      <circle cx="100" cy="100" r="92" />
-      <circle cx="100" cy="100" r="80" />
-    </svg>
-    <span class="sigil-initials">HL</span>
-  </div>
+  <div class="scroll">
+    <div class="scroll-cap scroll-cap-top" aria-hidden="true"></div>
+    <div class="scroll-body">
+      <div class="sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="sigil-ring">
+          <circle cx="100" cy="100" r="92" />
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <span class="sigil-initials">HL</span>
+      </div>
 
-  <h1>House Limmies</h1>
-  <p class="house-words">"Pinahan mo yan."</p>
-  <p class="addressee">To Princess Trisha of House Jalandoni</p>
-  <p class="question">Will you break bread with me?</p>
-  <p class="subtext">Speak your answer in the old tongue.</p>
+      <p class="eyebrow">House Limmies presents</p>
+      <h1 class="question-headline">Will you break bread with me?</h1>
+      <p class="house-words">"Pinahan mo yan."</p>
+      <p class="addressee">To Princess Trisha of House Jalandoni</p>
+      <p class="subtext">Speak your answer in the old tongue.</p>
 
-  <div class="choice-buttons">
-    <button id="btn-issa" class="valyrian-btn">
-      <span class="valyrian">Issa</span>
-      <span class="gloss">yes</span>
-    </button>
-    <button id="btn-daor" class="valyrian-btn">
-      <span class="valyrian">Daor</span>
-      <span class="gloss">no</span>
-    </button>
+      <div class="choice-buttons">
+        <button id="btn-issa" class="valyrian-btn">
+          <span class="valyrian">Issa</span>
+          <span class="gloss">yes</span>
+        </button>
+        <button id="btn-daor" class="valyrian-btn">
+          <span class="valyrian">Daor</span>
+          <span class="gloss">no</span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-cap scroll-cap-bottom" aria-hidden="true"></div>
   </div>
 </main>
 
@@ -109,7 +119,7 @@
     <circle class="dragon-eye" cx="45" cy="78" r="3" />
   </svg>
   <h2 class="dracarys-text">Dracarys.</h2>
-  <div id="dracarys-video" class="dracarys-video"></div>
+  <div id="dracarys-photo" class="dracarys-photo"></div>
   <button id="try-again">The flames remember. Choose again?</button>
 </div>
 
