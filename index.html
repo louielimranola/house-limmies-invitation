@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Lomar — An Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="story-overlay">
+  <div class="story-slide active" data-slide="0">
+    <p>Long before the Seven Kingdoms bent the knee — before dragons turned to ash and memory — there were Houses.</p>
+    <p>Houses bound not by blood alone, but by fire.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="1">
+    <p>Across the Narrow Sea, in a hall lit by dragonfire, House Lomar has kept its word for a thousand years.</p>
+    <p><em>Fire cannot kill a dragon.</em></p>
+    <p>And it cannot kill what House Lomar feels for you.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="2">
+    <p>A raven has been sent.</p>
+    <p>Not with war. Not with tribute.</p>
+    <p>But with an invitation.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="3">
+    <p>The Lord of House Lomar summons you to the table —</p>
+    <p>to break bread beneath the same roof, on a day of your choosing.</p>
+    <button class="continue-btn" id="enter-invitation">Enter the Hall</button>
+  </div>
+</div>
+
+<main id="invitation-page">
+  <div class="sigil" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="sigil-ring">
+      <circle cx="100" cy="100" r="92" />
+      <circle cx="100" cy="100" r="80" />
+    </svg>
+    <span class="sigil-initials">HL</span>
+  </div>
+
+  <h1>House Lomar</h1>
+  <p class="question">Will you break bread with House Lomar?</p>
+  <p class="subtext">Speak your answer in the old tongue.</p>
+
+  <div class="choice-buttons">
+    <button id="btn-issa" class="valyrian-btn">
+      <span class="valyrian">Issa</span>
+      <span class="gloss">yes</span>
+    </button>
+    <button id="btn-daor" class="valyrian-btn">
+      <span class="valyrian">Daor</span>
+      <span class="gloss">no</span>
+    </button>
+  </div>
+</main>
+
+<div id="dragon-overlay">
+  <div class="fire-sweep"></div>
+  <svg class="dragon-silhouette" viewBox="0 0 400 240" aria-hidden="true">
+    <path d="M230,150 C280,158 330,174 366,200 C345,194 320,192 299,197
+             C314,206 325,217 328,230 C304,216 275,206 249,200 Z" />
+    <ellipse cx="176" cy="146" rx="56" ry="32" />
+    <path d="M156,172 C151,190 140,201 122,206 C136,195 141,182 146,172 Z" />
+    <path d="M196,172 C199,193 192,206 178,213 C189,199 189,184 191,172 Z" />
+    <path d="M136,125 C110,100 85,75 55,62 C48,58 40,58 34,64
+             C42,66 50,72 55,80 C40,82 28,90 20,102
+             C34,100 46,102 55,110 C70,118 90,128 118,140 Z" />
+    <path d="M55,62 C60,47 67,37 77,31 C70,44 68,54 68,64 Z" />
+    <path d="M166,120 C191,69 231,29 286,14 C270,40 258,60 252,82
+             C270,70 293,64 316,66 C296,80 279,96 269,114
+             C286,108 303,108 319,114 C296,120 273,128 253,140
+             C231,132 206,126 179,128 Z" />
+    <circle class="dragon-eye" cx="45" cy="78" r="3" />
+  </svg>
+  <h2 class="dracarys-text">Dracarys.</h2>
+  <button id="try-again">The flames remember. Choose again?</button>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
