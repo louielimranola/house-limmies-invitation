@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>House Lomar — An Invitation</title>
+<title>House Limmies — An Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
@@ -13,26 +13,52 @@
 
 <div id="story-overlay">
   <div class="story-slide active" data-slide="0">
-    <p>For as long as either house cares to admit, House Lomar and House Jalandoni have traded jabs across every feast hall in the realm.</p>
-    <p>Whose halls burn brighter. Whose name the bards sing longer.</p>
+    <svg class="story-map" viewBox="0 0 260 320" aria-hidden="true">
+      <path class="map-landmass" d="M130,15 C158,22 180,48 186,85 C192,122 172,145 182,175
+               C192,205 208,225 198,258 C190,285 162,298 150,318
+               C140,300 122,290 112,272 C102,252 82,238 86,208
+               C90,178 70,152 76,118 C82,82 102,42 130,15 Z" />
+      <path class="map-divider" d="M68,172 C102,160 158,186 194,168" />
+      <circle class="map-marker map-marker-north" cx="128" cy="95" r="5" />
+      <circle class="map-marker map-marker-south" cx="150" cy="240" r="5" />
+      <text class="map-label map-label-north" x="128" y="70" text-anchor="middle">BULACAN</text>
+      <text class="map-sublabel" x="128" y="56" text-anchor="middle">House Limmies</text>
+      <text class="map-label map-label-south" x="150" y="275" text-anchor="middle">CAVITE</text>
+      <text class="map-sublabel" x="150" y="290" text-anchor="middle">House Jalandoni</text>
+    </svg>
+    <p>For over a thousand years, the land of Magali d'Or has been divided — the North against the South.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="1">
-    <p>It was never war. It was pride.</p>
-    <p>But there is a custom older than the rivalry itself.</p>
+    <p>In the North: House Limmies, whose words are known in every hall — <em>"Pinahan mo yan."</em></p>
+    <p>In the South: House Jalandoni, bannermen of the Koi.</p>
+    <svg class="koi-icon slide-icon" viewBox="0 0 120 80" aria-hidden="true">
+      <path d="M15,45 C10,35 15,22 30,18 C45,14 62,20 72,32
+               C78,26 88,22 98,24 C92,30 88,36 88,42 C88,48 92,54 98,60
+               C88,62 78,58 72,52 C62,64 45,70 30,66 C15,62 10,50 15,45 Z" />
+      <path d="M28,28 C24,22 24,14 30,8 C28,16 30,22 34,26 Z" />
+      <path d="M25,58 C20,64 20,72 26,78 C26,70 28,64 32,58 Z" />
+      <circle class="koi-eye" cx="34" cy="34" r="2.5" />
+    </svg>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="2">
-    <p>When a lord wishes to declare his intent toward a lady of another house, he does not send steel.</p>
-    <p>He sends bread.</p>
+    <p>A thousand years of mockery. A thousand petty victories.</p>
+    <p>North against South. Never once at the same table.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="3">
-    <p>Princess Trisha of House Jalandoni — the Lord of House Lomar summons you to his table,</p>
-    <p>to break bread beneath the same roof, on a day of your choosing.</p>
+    <p>But beyond both borders, the Hollow Tide is rising — a dark not seen in a thousand years.</p>
+    <p>No house has ever stood against it alone.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="4">
+    <p>So House Limmies extends its hand — not in conquest, but in truce.</p>
+    <p>Princess Trisha of House Jalandoni — will you break bread with me?</p>
     <button class="continue-btn" id="enter-invitation">Enter the Hall</button>
   </div>
 </div>
@@ -46,9 +72,10 @@
     <span class="sigil-initials">HL</span>
   </div>
 
-  <h1>House Lomar</h1>
+  <h1>House Limmies</h1>
+  <p class="house-words">"Pinahan mo yan."</p>
   <p class="addressee">To Princess Trisha of House Jalandoni</p>
-  <p class="question">Will you break bread with House Lomar?</p>
+  <p class="question">Will you break bread with me?</p>
   <p class="subtext">Speak your answer in the old tongue.</p>
 
   <div class="choice-buttons">

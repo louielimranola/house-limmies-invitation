@@ -4,6 +4,7 @@
   --ember-bright: #d94a1f;
   --gold: #c9a227;
   --parchment: #e8dcc3;
+  --koi: #3f9d8a;
 }
 
 * { box-sizing: border-box; }
@@ -59,6 +60,67 @@ h1, h2, .valyrian, .continue-btn {
 @keyframes line-in {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+.story-map {
+  width: min(52vw, 190px);
+  opacity: 0;
+  animation: line-in 1.2s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.map-landmass {
+  fill: rgba(232, 220, 195, 0.05);
+  stroke: var(--gold);
+  stroke-width: 1.5;
+}
+
+.map-divider {
+  fill: none;
+  stroke: var(--ember-bright);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
+
+.map-marker-north { fill: var(--ember-bright); }
+.map-marker-south { fill: var(--koi); }
+
+.map-label {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  fill: var(--parchment);
+}
+
+.map-sublabel {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 10px;
+  fill: #a99a7d;
+}
+
+.slide-icon {
+  width: 90px;
+  opacity: 0;
+  animation: line-in 1s ease forwards;
+  animation-delay: 2.2s;
+}
+
+.koi-icon {
+  fill: rgba(63, 157, 138, 0.15);
+  stroke: var(--koi);
+  stroke-width: 1.5;
+}
+
+.koi-eye {
+  fill: var(--koi);
+}
+
+.house-words {
+  font-style: italic;
+  font-size: 1rem;
+  color: #a99a7d;
+  margin: 0;
 }
 
 .continue-btn {

@@ -1,7 +1,8 @@
-# House Lomar — An Invitation
+# House Limmies — An Invitation
 
 A Game of Thrones / House of the Dragon–themed website that opens with a short
-in-world story, then poses one question: will you break bread with House Lomar?
+in-world story (House Limmies of the North vs. House Jalandoni of the South),
+then poses one question: will you break bread with me?
 
 ## Structure
 
