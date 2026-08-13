@@ -1,11 +1,40 @@
+const THEME_VIDEO_ID = 'eCemS3f-LDU';
+const DRACARYS_VIDEO_ID = 'J8-SjbRZ7jE';
+
 const slides = Array.from(document.querySelectorAll('.story-slide'));
 const storyOverlay = document.getElementById('story-overlay');
 const invitationPage = document.getElementById('invitation-page');
 const dragonOverlay = document.getElementById('dragon-overlay');
+const themeAudio = document.getElementById('theme-audio');
+const themeToggle = document.getElementById('theme-toggle');
+const dracarysVideo = document.getElementById('dracarys-video');
 
 let currentSlide = 0;
+let themePlaying = false;
+
+function startTheme() {
+  themeAudio.innerHTML = `<iframe src="https://www.youtube.com/embed/${THEME_VIDEO_ID}?autoplay=1&enablejsapi=1"
+    allow="autoplay" frameborder="0"></iframe>`;
+  themePlaying = true;
+  themeToggle.textContent = '🔇 Theme';
+}
+
+function stopTheme() {
+  themeAudio.innerHTML = '';
+  themePlaying = false;
+  themeToggle.textContent = '🎵 Theme';
+}
+
+themeToggle.addEventListener('click', () => {
+  if (themePlaying) {
+    stopTheme();
+  } else {
+    startTheme();
+  }
+});
 
 function goToNextSlide() {
+  if (!themePlaying) startTheme();
   slides[currentSlide].classList.remove('active');
   currentSlide += 1;
   if (currentSlide < slides.length) {
@@ -31,16 +60,19 @@ slides.forEach((slide) => {
 });
 
 function handleAccept() {
-  // Next step: reveal date/time/place once those are decided.
+  // Next step: swap in the Dothraki celebration video once it's shared, and reveal date/time/place.
   document.getElementById('btn-issa').classList.add('accepted');
 }
 
 function handleRefuse() {
   dragonOverlay.classList.add('active');
+  dracarysVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/${DRACARYS_VIDEO_ID}?autoplay=1"
+    allow="autoplay" frameborder="0" allowfullscreen></iframe>`;
 }
 
 function resetChoice() {
   dragonOverlay.classList.remove('active');
+  dracarysVideo.innerHTML = '';
 }
 
 document.getElementById('btn-issa').addEventListener('click', handleAccept);

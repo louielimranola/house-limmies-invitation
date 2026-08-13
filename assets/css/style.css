@@ -140,6 +140,14 @@ h1 {
   color: var(--parchment);
 }
 
+.addressee {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0;
+}
+
 .question {
   font-size: 1.3rem;
   font-style: italic;
@@ -272,6 +280,48 @@ h1 {
   animation-delay: 1.3s;
 }
 
+.dracarys-video {
+  width: min(80vw, 480px);
+  aspect-ratio: 16 / 9;
+  opacity: 0;
+  border: 1px solid var(--ember);
+  box-shadow: 0 0 24px rgba(138, 3, 3, 0.5);
+}
+
+.dracarys-video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#dragon-overlay.active .dracarys-video {
+  animation: line-in 1s ease forwards;
+  animation-delay: 2s;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+#theme-audio {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 #try-again {
   background: transparent;
   border: none;
@@ -286,7 +336,7 @@ h1 {
 
 #dragon-overlay.active #try-again {
   animation: line-in 1s ease forwards;
-  animation-delay: 2.4s;
+  animation-delay: 3.2s;
 }
 
 @media (max-width: 480px) {

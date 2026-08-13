@@ -13,27 +13,25 @@
 
 <div id="story-overlay">
   <div class="story-slide active" data-slide="0">
-    <p>Long before the Seven Kingdoms bent the knee — before dragons turned to ash and memory — there were Houses.</p>
-    <p>Houses bound not by blood alone, but by fire.</p>
+    <p>For as long as either house cares to admit, House Lomar and House Jalandoni have traded jabs across every feast hall in the realm.</p>
+    <p>Whose halls burn brighter. Whose name the bards sing longer.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="1">
-    <p>Across the Narrow Sea, in a hall lit by dragonfire, House Lomar has kept its word for a thousand years.</p>
-    <p><em>Fire cannot kill a dragon.</em></p>
-    <p>And it cannot kill what House Lomar feels for you.</p>
+    <p>It was never war. It was pride.</p>
+    <p>But there is a custom older than the rivalry itself.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="2">
-    <p>A raven has been sent.</p>
-    <p>Not with war. Not with tribute.</p>
-    <p>But with an invitation.</p>
+    <p>When a lord wishes to declare his intent toward a lady of another house, he does not send steel.</p>
+    <p>He sends bread.</p>
     <button class="continue-btn">Continue</button>
   </div>
 
   <div class="story-slide" data-slide="3">
-    <p>The Lord of House Lomar summons you to the table —</p>
+    <p>Princess Trisha of House Jalandoni — the Lord of House Lomar summons you to his table,</p>
     <p>to break bread beneath the same roof, on a day of your choosing.</p>
     <button class="continue-btn" id="enter-invitation">Enter the Hall</button>
   </div>
@@ -49,6 +47,7 @@
   </div>
 
   <h1>House Lomar</h1>
+  <p class="addressee">To Princess Trisha of House Jalandoni</p>
   <p class="question">Will you break bread with House Lomar?</p>
   <p class="subtext">Speak your answer in the old tongue.</p>
 
@@ -83,8 +82,12 @@
     <circle class="dragon-eye" cx="45" cy="78" r="3" />
   </svg>
   <h2 class="dracarys-text">Dracarys.</h2>
+  <div id="dracarys-video" class="dracarys-video"></div>
   <button id="try-again">The flames remember. Choose again?</button>
 </div>
+
+<button id="theme-toggle" aria-label="Play or pause the theme">🎵 Theme</button>
+<div id="theme-audio"></div>
 
 <script src="assets/js/main.js"></script>
 </body>
