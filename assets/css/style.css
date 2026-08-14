@@ -72,6 +72,7 @@ h1, h2, .valyrian, .continue-btn {
 .story-slide p:nth-child(3) { animation-delay: 2.2s; }
 .story-slide p:nth-child(4) { animation-delay: 3.2s; }
 
+.story-slide[data-slide="1"] .continue-btn { animation-delay: 4.2s; }
 .story-slide[data-slide="2"] .continue-btn { animation-delay: 4.2s; }
 
 @keyframes line-in {
@@ -95,38 +96,24 @@ h1, h2, .valyrian, .continue-btn {
   animation-delay: 3s;
 }
 
-.koi-icon {
-  fill: rgba(63, 157, 138, 0.15);
-  stroke: var(--koi);
-  stroke-width: 1.5;
-}
-
-.koi-eye {
-  fill: var(--koi);
-}
-
-.banner-row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
 .house-banner {
-  width: min(40vw, 190px);
+  width: min(55vw, 220px);
   display: block;
+  margin: 0 auto;
+  opacity: 0;
+  animation: line-in 1s ease forwards;
 }
 
 .limmies-banner {
   border: 1px solid var(--ember);
   box-shadow: 0 0 24px rgba(217, 74, 31, 0.35);
+  animation-delay: 1.3s;
 }
 
 .koi-banner {
   border: 1px solid var(--koi);
   box-shadow: 0 0 24px rgba(63, 157, 138, 0.35);
+  animation-delay: 3.2s;
 }
 
 .house-words {
