@@ -326,6 +326,44 @@ h1, h2, .valyrian, .continue-btn {
 
 #btn-issa.accepted .gloss { color: #3a2712; }
 
+.calendar-cta {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  opacity: 0;
+}
+
+.calendar-cta.visible {
+  display: flex;
+  animation: line-in 1s ease forwards;
+}
+
+.calendar-link {
+  padding: 0.7rem 1.6rem;
+  background: #6b1f1f;
+  color: var(--parchment);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border: 1px solid #6b1f1f;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.calendar-link:hover {
+  background: #8a2a2a;
+  transform: translateY(-2px);
+}
+
+.calendar-note {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #8a6b3a;
+  margin: 0;
+}
+
 /* ---------- Dragon / refusal overlay ---------- */
 
 #dragon-overlay {
