@@ -42,8 +42,10 @@ h1, h2, .valyrian, .continue-btn {
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
+  align-items: safe center;
   justify-content: center;
+  overflow-y: auto;
+  padding: 2rem 0;
   background: radial-gradient(ellipse at center, #1a1210 0%, var(--black) 70%);
   z-index: 30;
 }
@@ -345,12 +347,14 @@ h1, h2, .valyrian, .continue-btn {
   inset: 0;
   z-index: 40;
   display: none;
-  align-items: center;
+  align-items: safe center;
   justify-content: center;
   flex-direction: column;
   gap: 1.6rem;
   background: var(--black);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 2rem 0;
 }
 
 #dragon-overlay.active {
