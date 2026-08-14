@@ -142,6 +142,13 @@ h1, h2, .valyrian, .continue-btn {
   fill: var(--koi);
 }
 
+.koi-banner {
+  width: min(70vw, 260px);
+  border: 1px solid var(--koi);
+  box-shadow: 0 0 24px rgba(63, 157, 138, 0.35);
+  display: block;
+}
+
 .house-words {
   font-style: italic;
   font-size: 1rem;
