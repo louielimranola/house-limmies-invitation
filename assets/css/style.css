@@ -70,6 +70,9 @@ h1, h2, .valyrian, .continue-btn {
 .story-slide p:nth-child(1) { animation-delay: 0.2s; }
 .story-slide p:nth-child(2) { animation-delay: 1.2s; }
 .story-slide p:nth-child(3) { animation-delay: 2.2s; }
+.story-slide p:nth-child(4) { animation-delay: 3.2s; }
+
+.story-slide[data-slide="2"] .continue-btn { animation-delay: 4.2s; }
 
 @keyframes line-in {
   from { opacity: 0; transform: translateY(8px); }
