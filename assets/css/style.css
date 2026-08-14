@@ -145,11 +145,28 @@ h1, h2, .valyrian, .continue-btn {
   fill: var(--koi);
 }
 
+.banner-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.house-banner {
+  width: min(40vw, 190px);
+  display: block;
+}
+
+.limmies-banner {
+  border: 1px solid var(--ember);
+  box-shadow: 0 0 24px rgba(217, 74, 31, 0.35);
+}
+
 .koi-banner {
-  width: min(70vw, 260px);
   border: 1px solid var(--koi);
   box-shadow: 0 0 24px rgba(63, 157, 138, 0.35);
-  display: block;
 }
 
 .house-words {
