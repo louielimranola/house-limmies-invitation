@@ -80,52 +80,12 @@ h1, h2, .valyrian, .continue-btn {
 }
 
 .story-map {
-  width: min(52vw, 190px);
+  width: min(78vw, 320px);
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 28px rgba(201, 162, 39, 0.3);
   opacity: 0;
   animation: line-in 1.2s ease forwards;
   animation-delay: 0.2s;
-}
-
-.map-landmass {
-  fill: rgba(232, 220, 195, 0.05);
-  stroke: var(--gold);
-  stroke-width: 1.5;
-}
-
-.map-divider {
-  fill: none;
-  stroke: var(--ember-bright);
-  stroke-width: 2;
-  stroke-dasharray: 5 4;
-}
-
-.map-marker-north { fill: var(--ember-bright); }
-.map-marker-south { fill: var(--koi); }
-.map-marker-capital {
-  fill: var(--black);
-  stroke: var(--koi);
-  stroke-width: 1.5;
-}
-
-.map-capital-label {
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-size: 7px;
-  fill: var(--koi);
-}
-
-.map-label {
-  font-family: 'Cinzel', serif;
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  fill: var(--parchment);
-}
-
-.map-sublabel {
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-size: 10px;
-  fill: #a99a7d;
 }
 
 .slide-icon {
