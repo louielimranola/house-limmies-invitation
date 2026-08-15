@@ -85,9 +85,27 @@ h1, h2, .valyrian, .continue-btn {
 .story-slide p:nth-child(2) { animation-delay: 1.2s; }
 .story-slide p:nth-child(3) { animation-delay: 2.2s; }
 .story-slide p:nth-child(4) { animation-delay: 3.2s; }
+.story-slide p:nth-child(5) { animation-delay: 4.2s; }
 
 .story-slide[data-slide="1"] .continue-btn { animation-delay: 4.2s; }
-.story-slide[data-slide="2"] .continue-btn { animation-delay: 4.2s; }
+.story-slide[data-slide="2"] .continue-btn { animation-delay: 5.2s; }
+
+.rivalry-banners {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: line-in 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.rivalry-banners .house-banner {
+  width: min(32vw, 150px);
+  opacity: 1;
+  animation: none;
+}
 
 @keyframes line-in {
   from { opacity: 0; transform: translateY(8px); }
@@ -157,6 +175,15 @@ h1, h2, .valyrian, .continue-btn {
   color: var(--black);
 }
 
+.continue-btn:focus-visible,
+.valyrian-btn:focus-visible,
+.calendar-link:focus-visible,
+#theme-toggle:focus-visible,
+#try-again:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 #story-overlay.fade-out {
   animation: overlay-fade 0.9s ease forwards;
 }
@@ -185,98 +212,31 @@ h1, h2, .valyrian, .continue-btn {
   visibility: visible;
 }
 
-.scroll {
-  width: min(90vw, 480px);
-}
-
-.scroll-cap {
-  height: 22px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #c9a973, #8a6b3a);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  position: relative;
-  z-index: 2;
-}
-
-.scroll-cap-top { margin-bottom: -12px; }
-.scroll-cap-bottom { margin-top: -12px; }
-
-.scroll-body {
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"),
-    linear-gradient(160deg, #ecdfc0 0%, #ddc99b 50%, #e6d5ac 100%);
-  background-blend-mode: overlay;
-  background-size: 180px 180px, cover;
-  color: #3a2712;
-  padding: 3rem 2.2rem 2.4rem;
-  text-align: center;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 0 70px rgba(110, 78, 30, 0.35);
+.scroll-card {
+  width: min(90vw, 420px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1.2rem;
 }
 
-.sigil {
+.scroll-image-wrap {
   position: relative;
-  width: 110px;
-  height: 110px;
-  margin-bottom: 0.3rem;
-  border-radius: 50%;
-  background: radial-gradient(circle at 32% 28%, #9a3a2a 0%, #6b1f1f 55%, #4a1010 100%);
-  box-shadow:
-    0 6px 14px rgba(0, 0, 0, 0.45),
-    inset 0 2px 3px rgba(255, 220, 190, 0.35),
-    inset 0 -6px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
 }
 
-.sigil-ring circle {
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 1.2;
-  opacity: 0.85;
+.scroll-art {
+  width: 100%;
+  display: block;
 }
 
-.sigil-initials {
+.scroll-buttons {
   position: absolute;
-  inset: 0;
+  left: 7%;
+  top: 88%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.8rem;
-  color: var(--gold);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #8a5a2a;
-  margin: 0;
-}
-
-.question-headline {
-  font-size: clamp(1.6rem, 5vw, 2.3rem);
-  line-height: 1.3;
-  letter-spacing: 0.01em;
-  color: #3a2712;
-  margin: 0;
-}
-
-.addressee {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #8a4b1f;
-  margin: 0;
-}
-
-.subtext {
-  font-size: 0.9rem;
-  color: #7a6a4a;
-  margin: 0 0 0.4rem;
+  gap: 0.4rem;
 }
 
 .choice-buttons {
@@ -288,22 +248,28 @@ h1, h2, .valyrian, .continue-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
-  padding: 0.9rem 2.2rem;
-  background: transparent;
+  gap: 0.1rem;
+  padding: 0.45rem 0.85rem;
+  background: rgba(232, 220, 195, 0.35);
+  backdrop-filter: blur(2px);
   border: 1px solid #6b1f1f;
   color: #3a2712;
   cursor: pointer;
-  transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s;
+  font-size: 0.85em;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+
+.scroll-buttons .valyrian-btn {
+  padding: 0.35rem 0.6rem;
 }
 
 .valyrian-btn .valyrian {
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
 }
 
 .valyrian-btn .gloss {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: #8a6b3a;
   font-style: italic;
 }
