@@ -182,7 +182,7 @@ h1, h2, .valyrian, .continue-btn {
   border-radius: 50%;
   background: var(--gold);
   box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.25), 0 0 12px rgba(201, 162, 39, 0.6);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s, background 0.3s;
 }
 
 .map-pin-label {
@@ -197,7 +197,7 @@ h1, h2, .valyrian, .continue-btn {
 
 .map-pin:hover .map-pin-dot,
 .map-pin.active .map-pin-dot {
-  transform: scale(1.4);
+  transform: scale(1.7);
   background: var(--ember-bright);
   box-shadow: 0 0 0 6px rgba(217, 74, 31, 0.3), 0 0 18px rgba(217, 74, 31, 0.8);
 }
