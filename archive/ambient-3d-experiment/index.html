@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Limmies — An Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="ambient-canvas-wrap" aria-hidden="true"><canvas id="ambient-canvas"></canvas></div>
+<div class="ambient-fallback" aria-hidden="true"></div>
+<div class="ambient-bg" aria-hidden="true"></div>
+
+<div id="story-overlay">
+  <div class="story-slide active" data-slide="0">
+    <img class="story-map" src="assets/img/luzon-map.png" alt="Map of Luzon, divided into North and South">
+    <p>For over a thousand years, Luzon has been divided — the North against the South.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="1">
+    <p>In the North: House Limmies — as clever as they are endearing — ruled by their Lord, Lomer: a patient man, kind to a fault.</p>
+    <img class="house-banner limmies-banner" src="assets/img/lomer-portrait.png" alt="Lord Lomer of House Limmies, enthroned beside the Limmies banner">
+    <p>In the South: House Jalandoni, seated at their capital Nuvali, ruled by Chalyn — bannermen of the Koi, whose house words are carved above every gate: <em>"Men are trash."</em></p>
+    <img class="house-banner koi-banner" src="assets/img/trisha-portrait.png" alt="Chalyn of House Jalandoni, beside the Koi banner">
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="2">
+    <div class="rivalry-banners">
+      <img class="house-banner" src="assets/img/limmies-banner.png" alt="Banner of House Limmies, crowned bear">
+      <img class="house-banner" src="assets/img/koi-banner.png" alt="Banner of House Jalandoni, twin koi">
+    </div>
+    <p>Two houses, nagsusungitan for over a thousand years — closer in blood than either would admit, further apart in pride than the sea between them.</p>
+    <p>A thousand years of rage-baiting and pettiness.</p>
+    <p>Every name-day tourney, every harvest feast, a fresh excuse to prove whose land is greater.</p>
+    <p>North against South. Never once at the same table.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="3">
+    <p>But beyond those borders, something older than both houses is stirring.</p>
+    <p>When the Long Night falls, the cold does not knock — it simply arrives, and does not leave.</p>
+    <p>No house has ever stood against it alone.</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+
+  <div class="story-slide" data-slide="4">
+    <p>They cannot win without the other.</p>
+    <p>Now Lomer of House Limmies extends his hand — not in conquest, but in truce.</p>
+    <p>Princess Trisha of House Jalandoni — will you break bread with me?</p>
+    <button class="continue-btn" id="enter-invitation">Enter the Hall</button>
+  </div>
+</div>
+
+<main id="invitation-page">
+  <div class="scroll-card">
+    <div class="scroll-image-wrap">
+      <img class="scroll-art" src="assets/img/invitation-scroll.png" alt="A weathered scroll, sealed with a koi wax seal, reading: Our houses have warred a thousand years — Jalandoni against Lim — old grudges older than either of us can name. But even rival houses must break bread eventually. Trisha Lyn of House Jalandoni, will you break bread with me? (coffee tayo bebe)">
+      <div class="scroll-buttons">
+        <button id="btn-issa" class="valyrian-btn">
+          <span class="valyrian">Issa</span>
+          <span class="gloss">yes</span>
+        </button>
+        <button id="btn-daor" class="valyrian-btn">
+          <span class="valyrian">Daor</span>
+          <span class="gloss">no</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="calendar-cta" class="calendar-cta">
+      <a id="calendar-link" class="calendar-link" href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
+      <p class="calendar-note">Date, time, and place are still placeholders — House Limmies will confirm soon.</p>
+    </div>
+  </div>
+</main>
+
+<div id="dragon-overlay">
+  <div class="fire-sweep"></div>
+  <svg class="dragon-silhouette" viewBox="0 0 400 240" aria-hidden="true">
+    <path d="M230,150 C280,158 330,174 366,200 C345,194 320,192 299,197
+             C314,206 325,217 328,230 C304,216 275,206 249,200 Z" />
+    <ellipse cx="176" cy="146" rx="56" ry="32" />
+    <path d="M156,172 C151,190 140,201 122,206 C136,195 141,182 146,172 Z" />
+    <path d="M196,172 C199,193 192,206 178,213 C189,199 189,184 191,172 Z" />
+    <path d="M136,125 C110,100 85,75 55,62 C48,58 40,58 34,64
+             C42,66 50,72 55,80 C40,82 28,90 20,102
+             C34,100 46,102 55,110 C70,118 90,128 118,140 Z" />
+    <path d="M55,62 C60,47 67,37 77,31 C70,44 68,54 68,64 Z" />
+    <path d="M166,120 C191,69 231,29 286,14 C270,40 258,60 252,82
+             C270,70 293,64 316,66 C296,80 279,96 269,114
+             C286,108 303,108 319,114 C296,120 273,128 253,140
+             C231,132 206,126 179,128 Z" />
+    <circle class="dragon-eye" cx="45" cy="78" r="3" />
+  </svg>
+  <h2 class="dracarys-text">Dracarys.</h2>
+  <div id="dracarys-photo" class="dracarys-photo"></div>
+  <button id="try-again">The flames remember. Choose again?</button>
+</div>
+
+<button id="theme-toggle" aria-label="Play or pause the theme">🎵 Theme</button>
+<div id="theme-audio"></div>
+
+<script type="module" src="assets/js/ambient-scene.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

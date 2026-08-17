@@ -89,6 +89,16 @@ h1, h2, .valyrian, .continue-btn {
 
 .story-slide[data-slide="1"] .continue-btn { animation-delay: 4.2s; }
 .story-slide[data-slide="2"] .continue-btn { animation-delay: 5.2s; }
+.story-slide[data-slide="3"] .continue-btn { animation-delay: 5.2s; }
+
+.enemy-image {
+  width: min(90vw, 420px);
+  border: 1px solid #4a4a4a;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: line-in 1.2s ease forwards;
+  animation-delay: 0.2s;
+}
 
 .rivalry-banners {
   width: 100%;
