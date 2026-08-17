@@ -8,53 +8,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
 <div class="ambient-bg" aria-hidden="true"></div>
 
 <div id="story-overlay">
-  <div class="story-slide story-slide-map active" data-slide="0" id="map-journey">
-    <div class="map-journey-sticky">
-      <img class="story-map" src="assets/img/luzon-map.png" alt="Map of Luzon, divided into North and South" id="journey-map">
-
-      <div class="map-pins" id="map-pins">
-        <button type="button" class="map-pin" data-city="bulacan" style="--pin-x: 51%; --pin-y: 34%;" aria-label="Bulacan — seat of House Limmies">
-          <span class="map-pin-dot"></span>
-          <span class="map-pin-label">Bulacan</span>
-        </button>
-        <button type="button" class="map-pin" data-city="nuvali" style="--pin-x: 35%; --pin-y: 62%;" aria-label="Nuvali — capital of House Jalandoni">
-          <span class="map-pin-dot"></span>
-          <span class="map-pin-label">Nuvali</span>
-        </button>
-      </div>
-
-      <div class="map-journey-caption" id="journey-caption">
-        <p class="map-journey-kicker">For over a thousand years, Luzon has been divided</p>
-        <h3 class="map-journey-title" id="journey-title">The North against the South</h3>
-        <p class="map-journey-text" id="journey-text">Scroll to see how far apart they really are.</p>
-      </div>
-
-      <p class="scroll-hint" id="scroll-hint">Scroll to explore ↓</p>
-    </div>
-
-    <div class="map-journey-track" id="map-journey-track">
-      <section class="map-journey-chapter" data-chapter="intro"></section>
-      <section class="map-journey-chapter" data-chapter="bulacan"></section>
-      <section class="map-journey-chapter" data-chapter="nuvali"></section>
-      <section class="map-journey-chapter map-journey-outro" data-chapter="outro">
-        <button class="continue-btn">Continue</button>
-      </section>
-    </div>
-
-    <div class="map-detail-panel" id="map-detail-panel" aria-hidden="true">
-      <div class="map-detail-panel-inner">
-        <button type="button" class="map-detail-close" id="map-detail-close" aria-label="Close">&times;</button>
-        <h3 id="map-detail-title"></h3>
-        <p id="map-detail-text"></p>
-      </div>
+  <div class="story-slide story-slide-map active" data-slide="0">
+    <img class="story-map" src="assets/img/luzon-map.png" alt="Map of Luzon, divided into North and South">
+    <div class="story-slide-map-content">
+      <p>For over a thousand years, Luzon has been divided — the North against the South.</p>
+      <button class="continue-btn">Continue</button>
     </div>
   </div>
 
@@ -143,7 +107,6 @@
 <button id="theme-toggle" aria-label="Play or pause the theme">🎵 Theme</button>
 <div id="theme-audio"></div>
 
-<script src="assets/js/map-journey.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
