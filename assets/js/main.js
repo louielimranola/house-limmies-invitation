@@ -1,5 +1,6 @@
 const THEME_VIDEO_ID = 'eCemS3f-LDU';
-const TRISHA_PHOTO_SRC = 'assets/img/trisha.jpg';
+const COFFEE_VIDEO_SRC = 'assets/img/coffee.mp4';
+const DRAGON_VIDEO_SRC = 'assets/img/punishment.mov';
 
 // Placeholder event details — update these once a real date/time/place is set.
 // Start/end are UTC (with the Z suffix); ctz controls the timezone Google Calendar displays them in.
@@ -28,7 +29,8 @@ const invitationPage = document.getElementById('invitation-page');
 const dragonOverlay = document.getElementById('dragon-overlay');
 const themeAudio = document.getElementById('theme-audio');
 const themeToggle = document.getElementById('theme-toggle');
-const dracarysPhoto = document.getElementById('dracarys-photo');
+const dracarysMedia = document.getElementById('dracarys-media');
+const coffeeVideoContainer = document.getElementById('coffee-video');
 
 let currentSlide = 0;
 let themePlaying = false;
@@ -80,21 +82,31 @@ slides.forEach((slide) => {
   }
 });
 
+function playInto(container, src) {
+  container.innerHTML = `<video src="${src}" playsinline></video>`;
+  const video = container.querySelector('video');
+  video.play().catch(() => {
+    video.muted = true;
+    video.play();
+  });
+}
+
 function handleAccept() {
-  // Next step: swap in the Dothraki celebration video once it's shared.
   document.getElementById('btn-issa').classList.add('accepted');
   document.getElementById('calendar-link').href = buildCalendarUrl();
   document.getElementById('calendar-cta').classList.add('visible');
+  coffeeVideoContainer.classList.add('visible');
+  playInto(coffeeVideoContainer, COFFEE_VIDEO_SRC);
 }
 
 function handleRefuse() {
   dragonOverlay.classList.add('active');
-  dracarysPhoto.innerHTML = `<img src="${TRISHA_PHOTO_SRC}" alt="">`;
+  playInto(dracarysMedia, DRAGON_VIDEO_SRC);
 }
 
 function resetChoice() {
   dragonOverlay.classList.remove('active');
-  dracarysPhoto.innerHTML = '';
+  dracarysMedia.innerHTML = '';
 }
 
 document.getElementById('btn-issa').addEventListener('click', handleAccept);

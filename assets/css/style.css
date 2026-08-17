@@ -335,6 +335,24 @@ h1, h2, .valyrian, .continue-btn {
 
 #btn-issa.accepted .gloss { color: #3a2712; }
 
+.coffee-video {
+  display: none;
+  width: 100%;
+  opacity: 0;
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 24px rgba(201, 162, 39, 0.4);
+}
+
+.coffee-video.visible {
+  display: block;
+  animation: line-in 1s ease forwards;
+}
+
+.coffee-video video {
+  width: 100%;
+  display: block;
+}
+
 .calendar-cta {
   display: none;
   flex-direction: column;
@@ -452,22 +470,19 @@ h1, h2, .valyrian, .continue-btn {
   animation-delay: 1.3s;
 }
 
-.dracarys-photo {
-  width: min(60vw, 320px);
-  aspect-ratio: 4 / 5;
+.dracarys-media {
+  width: min(80vw, 460px);
   opacity: 0;
   border: 1px solid var(--ember);
   box-shadow: 0 0 24px rgba(138, 3, 3, 0.5);
 }
 
-.dracarys-photo img {
+.dracarys-media video {
   width: 100%;
-  height: 100%;
   display: block;
-  object-fit: cover;
 }
 
-#dragon-overlay.active .dracarys-photo {
+#dragon-overlay.active .dracarys-media {
   animation: line-in 1s ease forwards;
   animation-delay: 2s;
 }
