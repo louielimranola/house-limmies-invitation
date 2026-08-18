@@ -255,6 +255,32 @@ h1, h2, .valyrian, .continue-btn {
   visibility: visible;
 }
 
+#invitation-page.fade-out {
+  animation: overlay-fade 0.7s ease forwards;
+}
+
+#accept-page {
+  display: none;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+}
+
+#accept-page.revealed {
+  display: flex;
+  animation: line-in 1.2s ease forwards;
+}
+
+#accept-page .house-words {
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
 .scroll-card {
   width: min(90vw, 420px);
   display: flex;
@@ -337,7 +363,7 @@ h1, h2, .valyrian, .continue-btn {
 
 .coffee-video {
   display: none;
-  width: 100%;
+  width: min(90vw, 460px);
   opacity: 0;
   border: 1px solid var(--gold);
   box-shadow: 0 0 24px rgba(201, 162, 39, 0.4);

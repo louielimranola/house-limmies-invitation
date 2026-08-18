@@ -26,6 +26,7 @@ function buildCalendarUrl() {
 const slides = Array.from(document.querySelectorAll('.story-slide'));
 const storyOverlay = document.getElementById('story-overlay');
 const invitationPage = document.getElementById('invitation-page');
+const acceptPage = document.getElementById('accept-page');
 const dragonOverlay = document.getElementById('dragon-overlay');
 const themeAudio = document.getElementById('theme-audio');
 const themeToggle = document.getElementById('theme-toggle');
@@ -93,10 +94,15 @@ function playInto(container, src) {
 
 function handleAccept() {
   document.getElementById('btn-issa').classList.add('accepted');
-  document.getElementById('calendar-link').href = buildCalendarUrl();
-  document.getElementById('calendar-cta').classList.add('visible');
-  coffeeVideoContainer.classList.add('visible');
-  playInto(coffeeVideoContainer, COFFEE_VIDEO_SRC);
+  invitationPage.classList.add('fade-out');
+  setTimeout(() => {
+    invitationPage.style.display = 'none';
+    acceptPage.classList.add('revealed');
+    document.getElementById('calendar-link').href = buildCalendarUrl();
+    document.getElementById('calendar-cta').classList.add('visible');
+    coffeeVideoContainer.classList.add('visible');
+    playInto(coffeeVideoContainer, COFFEE_VIDEO_SRC);
+  }, 700);
 }
 
 function handleRefuse() {
